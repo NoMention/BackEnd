@@ -35,11 +35,10 @@ public class Main {
                         System.out.println("\nName: " + user.getUsername() +
                                 "\nLevel: " + user.getLevel());
                         System.out.println("\nDuck Stats:" +
-                                "\nSleep = " + user.getSleep() +
-                                "\nCleanliness = " + user.getCleanliness() +
-                                "\nHunger = " + user.getHunger() +
-                                "\nFun =" + user.getFun()
-                        );
+                                "\nSleep = " + String.format("%.0f%%", user.getSleep() * 100) +
+                                "\nCleanliness = " + String.format("%.0f%%", user.getCleanliness() * 100) +
+                                "\nHunger = " + String.format("%.0f%%", user.getHunger() * 100) +
+                                "\nFun =" + String.format("%.0f%%",user.getFun()  * 100));
                     }
                 case 3:
                     System.out.println("Existing...");
