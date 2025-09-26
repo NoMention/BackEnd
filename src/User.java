@@ -15,7 +15,7 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this. password = password;
-        fun = 1.0; // Note: starts at full starts
+        fun = 1.0; // Note: starts at full stats
         hunger = 1.0;
         cleanliness = 1.0;
         sleep = 1.0;
