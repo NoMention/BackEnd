@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import  java.util.Map;
-
 public class UserManager {
     // HARDCODE USERDATA BASE - LATER REVISE WHEN DATABASE IS READY
     private HashMap<String, User> users;
