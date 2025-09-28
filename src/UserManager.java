@@ -13,18 +13,18 @@ public class UserManager {
 
     // REGISTER METHOD
     public boolean register(String username, String password) {
-        if(users.containsKey(username)) return false; // Checks if the username is taken already
-        User newUser = new User(username, password);
+        if(users.containsKey(username)) return false; // Account already exists
+        User newUser = new User(username, password); // If not, create New Account
         users.put(username, newUser);
         return true; // Registration Success
     }
 
     // LOGIN METHOD
     public User login(String username, String password) {
-        if(users.containsKey(username)){
-            User user = users.get(username);
-            if(user.getPassword().equals(password)) return user; // Log in Success
-        }
+        User user = users.get(username);
+        if(user != null && user.checkPassword(password)){return user;} // Looks up the user & ask to check its own password
+//            if(user.getPassword().equals(password)) return user; // Log in Success
+//        }
         return null; // Log in Failed
     }
 }
